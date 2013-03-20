@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'jquery-rails'
 gem 'rails', '3.2.13'
+gem 'devise'
 
 group :production do
 	gem 'pg'

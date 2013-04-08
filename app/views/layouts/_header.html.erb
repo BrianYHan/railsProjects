@@ -10,14 +10,23 @@
       </a>
  
       <!-- Be sure to leave the brand out there if you want it shown -->
-      <%= link_to "First Rails App", root_path, class: "brand" %>
+      <%= link_to "Home Page", root_path, class: "brand" %>
  
       <!-- Everything you want hidden at 940px or less, place within here -->
       <div class="nav-collapse collapse">
         <ul class="nav">
-        	<li><%= link_to "Home", root_path %></li>
-			<li><%= link_to "About", about_path %></li>
-
+			    <ul>
+            <li><%= link_to "About Us", about_path %></li>
+            <li><%= link_to "Contact Us", contact_us_path %></li>
+            <li><%= link_to "Working Schedule", working_sched_14_path %></li>
+            <li><%= link_to "Terms and Policies", terms_policies_15_path %></li>
+          </ul>
+          <ul>
+            <li><%= link_to "Shipping", shipping_path %></li>
+            <li><%= link_to "Downloadable Forms", downloads_path %></li>
+          </ul>
+          <li><%= link_to "Products", products_path %></li>
+          <li><%= link_to "Coupons", dental_lab_coupons_path %></li>
 				<!-- .nav, .navbar-search, .navbar-form, etc -->
 		</ul>
 		<ul class="nav pull-right">

@@ -2,8 +2,9 @@ $baseFontFamily: Playfair Display;
 @import url(http://fonts.googleapis.com/css?family=Playfair+Display);
 
 $btnPrimaryBackground: green;
-$navbarBackgroundHighlight: #FFF;
-$navbarBackground: #FFF;
+$navbarBackgroundHighlight: #00AD7F;;
+$navbarBackground: #00AD7F;
+$navbarText: #111000;
 
 @import 'bootstrap';
 

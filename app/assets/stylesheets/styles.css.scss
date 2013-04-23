@@ -1,30 +1,368 @@
-$baseFontFamily: Playfair Display;
-@import url(http://fonts.googleapis.com/css?family=Playfair+Display);
+// Global values
+// --------------------------------------------------
 
+
+// Grays
+// -------------------------
+$black:                 #000 !default;
+$grayDarker:            #222 !default;
+$grayDark:              #333 !default;
+$gray:                  #555 !default;
+$grayLight:             #999 !default;
+$grayLighter:           #eee !default;
+$cream:									#FAFAFA !default;
+$white:                 #fff !default;
+$abcGreen: #00AD7F;
 $btnPrimaryBackground: green;
-$navbarBackgroundHighlight: #00AD7F;;
-$navbarBackground: #00AD7F;
-$navbarText: #111000;
+$navbarBackgroundHighlight: $abcGreen;
+$navbarBackground: $abcGreen;
+$navbarText: white;
+
+
+// Accent colors
+// -------------------------
+$blue:                  #049cdb !default;
+$blueDark:              #0064cd !default;
+$green:                 #46a546 !default;
+$red:                   #9d261d !default;
+$yellow:                #ffc40d !default;
+$orange:                #f89406 !default;
+$pink:                  #c3325f !default;
+$purple:                #7a43b6 !default;
+
+
+// Scaffolding
+// -------------------------
+$bodyBackground:        $white !default;
+$textColor:             $white !default;
+
+
+
+// Links
+// -------------------------
+$linkColor:             #08c !default;
+$linkColorHover:        lighten($linkColor, 15%) !default;
+
+
+// Typography
+// -------------------------
+@import url(http://fonts.googleapis.com/css?family=Quicksand:300,400,700);
+$sansFontFamily:      'Raleway', sans-serif;
+@import url(http://fonts.googleapis.com/css?family=Satisfy);
+@import url(http://fonts.googleapis.com/css?family=Playfair+Display);
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,800);
+
+
+$serifFontFamily:       'Quicksand';
+$monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace !default;
+
+$baseFontSize:          18px !default;
+$baseFontFamily:        $sansFontFamily !default;
+$baseLineHeight:        20px !default;
+$altFontFamily:         $serifFontFamily !default;
+
+$headingsFontFamily:    inherit !default; // empty to use BS default, $baseFontFamily
+$headingsFontWeight:    bold !default;    // instead of browser default, bold
+$headingsColor:         inherit !default; // empty to use BS default, $textColor
+
+$codeColor:							$cream;
+$codeBackground:				black;
+
+
+
+// Component sizing
+// -------------------------
+// Based on 14px font-size and 20px line-height
+
+$fontSizeLarge:         $baseFontSize * 1.25; // ~18px
+$fontSizeSmall:         $baseFontSize * 0.85; // ~12px
+$fontSizeMini:          $baseFontSize * 0.75; // ~11px
+
+$paddingLarge:          11px 19px !default; // 44px
+$paddingSmall:          2px 10px !default;  // 26px
+$paddingMini:           0px 6px !default;   // 22px
+
+$baseBorderRadius:      4px !default;
+$borderRadiusLarge:     6px !default;
+$borderRadiusSmall:     3px !default;
+
+
+//-------------------------------------------------------------------------
+//Importing default CSS
+
 
 @import 'bootstrap';
 
 @import 'bootstrap-responsive';
 
+
+//-------------------------------------------------------------------------
+
+//Body and footer styles
 body{
 	padding-top: 60px;
-}
+	padding-bottom: 40px;
+  color: #5a5a5a;
+  height:100%
 
-.navbar-inner {
-	@include box-shadow(none !important);
-	border:0;
 }
 
 .footer{
-	margin-top: 45px;
-	color: $grayLight;
+height:8%;
+	margin-bottom:0px;
+  padding: 10px 5px 5px 5px;
+	color:$cream;
+	background-color: $grayLight;
+  width:100%;
 	a{
-		color: grey;
+		color: black;
+		&:hover{color:$blueDark;}
 	}
 }
+.container{
+	overflow:hidden;
+  height:100%;
+}
+ /* CUSTOMIZE THE NAVBAR
+     -------------------------------------------------- */
+.navbar{
+	z-index:25;
+	.navbar-inner {
+      -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+         -moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+              box-shadow: 0 2px 10px rgba(0,0,0,.25);
+		border:0;
+    padding-left:40px;
+    padding-right:40px;
+	}
+	.brand{
+		color:black;
+		font-size:30px;
+		padding: 14px 20px 16px; /* Increase vertical padding to match navbar links */
+    font-weight: bold;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+		&:hover{
+			color:white;
+		}
+	}
+	.nav{
+		li{
+			a{
+				color:black;
+				&:hover{
+					color:white;
+				}
+			}
+		}
+	}
+}
+    /* Special class on .container surrounding .navbar, used for positioning it into place. */
+    .navbar-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 30;
+      margin-top: 60px;
+      margin-bottom: -90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
+    }
 
+  
+ 
+    /* Navbar links: increase padding for taller navbar */
+    .navbar .nav > li > a {
+      padding: 15px 20px;
+    }
+
+    /* Offset the responsive button for proper vertical alignment */
+    .navbar .btn-navbar {
+      margin-top: 10px;
+    }
+
+
+
+    /* CUSTOMIZE THE CAROUSEL
+    -------------------------------------------------- */
+
+    /* Carousel base class */
+    .carousel {
+      margin-bottom: 60px;
+    }
+
+    .carousel .container {
+      position: relative;
+      z-index: 9;
+    }
+
+    .carousel-control {
+      height: 80px;
+      margin-top: 0;
+      font-size: 120px;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+      background-color: transparent;
+      border: 0;
+      z-index: 10;
+    }
+
+    .carousel .item {
+      height: 500px;
+    }
+    .carousel img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      height: 500px;
+    }
+
+    .carousel-caption {
+      background-color: transparent;
+      position: static;
+      max-width: 550px;
+      padding: 0 20px;
+      margin-top: 200px;
+    }
+    .carousel-caption h1,
+    .carousel-caption .lead {
+      margin: 0;
+      line-height: 1.25;
+      color: #fff;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+    }
+    .carousel-caption .btn {
+      margin-top: 10px;
+    }
+
+
+
+    /* MARKETING CONTENT
+    -------------------------------------------------- */
+
+    /* Center align the text within the three columns below the carousel */
+    .marketing .span4 {
+      text-align: center;
+    }
+    .marketing h2 {
+      font-weight: normal;
+    }
+    .marketing .span4 p {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+
+    /* Featurettes
+    ------------------------- */
+
+    .featurette-divider {
+      margin: 80px 0; /* Space out the Bootstrap <hr> more */
+    }
+    .featurette {
+    	font-family:$serifFontFamily;
+      padding-top: 120px; /* Vertically center images part 1: add padding above and below text. */
+      overflow: hidden; /* Vertically center images part 2: clear their floats. */
+    }
+    .featurette-image {
+      margin-top: -120px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
+    }
+
+    /* Give some space on the sides of the floated elements so text doesn't run right into it. */
+    .featurette-image.pull-left {
+      margin-right: 40px;
+    }
+    .featurette-image.pull-right {
+      margin-left: 40px;
+    }
+
+    /* Thin out the marketing headings */
+    .featurette-heading {
+      font-size: 50px;
+      font-weight: 300;
+      line-height: 1;
+      letter-spacing: -1px;
+    }
+
+
+
+    /* RESPONSIVE CSS
+    -------------------------------------------------- */
+
+    @media (max-width: 979px) {
+
+      .container.navbar-wrapper {
+        margin-bottom: 0;
+        width: auto;
+      }
+      .navbar-inner {
+        border-radius: 0;
+        margin: -20px 0;
+      }
+
+      .carousel .item {
+        height: 500px;
+      }
+      .carousel img {
+        width: auto;
+        height: 500px;
+      }
+
+      .featurette {
+        height: auto;
+        padding: 0;
+      }
+      .featurette-image.pull-left,
+      .featurette-image.pull-right {
+        display: block;
+        float: none;
+        max-width: 40%;
+        margin: 0 auto 20px;
+      }
+    }
+
+
+    @media (max-width: 767px) {
+
+      .navbar-inner {
+        margin: -20px;
+      }
+
+      .carousel {
+        margin-left: -20px;
+        margin-right: -20px;
+      }
+      .carousel .container {
+
+      }
+      .carousel .item {
+        height: 300px;
+      }
+      .carousel img {
+        height: 300px;
+      }
+      .carousel-caption {
+        width: 65%;
+        padding: 0 70px;
+        margin-top: 100px;
+      }
+      .carousel-caption h1 {
+        font-size: 30px;
+      }
+      .carousel-caption .lead,
+      .carousel-caption .btn {
+        font-size: 18px;
+      }
+
+      .marketing .span4 + .span4 {
+        margin-top: 40px;
+      }
+
+      .featurette-heading {
+        font-size: 30px;
+      }
+      .featurette .lead {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+    }
 

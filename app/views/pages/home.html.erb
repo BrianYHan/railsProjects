@@ -1,15 +1,69 @@
 <% if user_signed_in? %>
-	<h1>You're logged in!</h1>
-<% else %>
+	<h1>You're logged in to Ace!</h1>
 	<div class="hero-unit">
 		<h1>ACE DENTAL LABS</h1>
 		<p>
+			<h2>Become a member </h2>
 			<h2>CALL TODAY</h2>
 			<h2>(714) 525-3653</h2>
 		</p>
 <br>
 		<p>
-			<%=link_to "Contact Us Now!", contact_us_path , class: "btn btn-primary btn-large"%>
+			<%=link_to "Request a FREE Quote Today", contact_us_path , class: "btn btn-primary btn-large"%>
 		</p>
 </div>
+   <div class="row-fluid">
+        <div class="span4">
+          <h2>Testimonial</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div>
+        <div class="span4">
+          <h2>Testimonial</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+       </div>
+        <div class="span4">
+          <h2>Testimonial</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div>
+      </div>
+      <br>
+       <br> <br> <br>
+<% else %>
+	<div class="hero-unit">
+		<h1>ACE DENTAL LABS</h1>
+		<p>
+			<h2>Become a member </h2>
+			<h2>CALL TODAY</h2>
+			<h2>(714) 525-3653</h2>
+		</p>
+<br>
+		<p>
+			<%=link_to "Request a FREE Quote Today", contact_us_path , class: "btn btn-primary btn-large"%>
+		</p>
+</div>
+   <div class="row-fluid">
+        <div class="span4">
+          <h2>Heading</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div>
+        <div class="span4">
+          <h2>Heading</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+       </div>
+        <div class="span4">
+          <h2>Heading</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div>
+      </div>
+      <br>
+       <br> <br> <br>
+		
+  
+
 <% end %>

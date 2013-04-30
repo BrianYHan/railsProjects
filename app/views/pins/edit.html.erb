@@ -1,6 +1,9 @@
-<h1>Editing pin</h1>
+<% provide(:title, 'Editing Patient Photo') %>
+<% provide(:pageSummary, "Ace Dental Lab | The Best Dental Lab in Southern California | Product List | CAD/CAM | Zirconia | Lava | Crown | Bridge") %>
+<h1 class="page-header">Editing Patient Photo</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @pin %> |
+<%= link_to 'Show', @pin %> 
+<br>
 <%= link_to 'Back', pins_path %>

@@ -1,0 +1,46 @@
+<div class="well sidebar-nav">
+  <ul class="nav nav-list">
+    <li class="nav-header"><%= link_to "Product Menu", products_path  %></li>
+      <% if current_page?(allCeramic_path) -%>
+        <li class="active">
+        <% else -%>
+          <li>
+        <% end -%>
+          <%= link_to "All-Ceramic Crowns & Bridges", allCeramic_path  %>
+          </li>
+      <% if current_page?(cadCam_path) -%>
+        <li class="active">
+        <% else -%>
+        <li>
+        <% end -%>
+        <%= link_to "CAD/CAM", cadCam_path  %>
+        </li>
+      <% if current_page?(composites_path) -%>
+        <li class="active">
+        <% else -%>
+          <li>
+        <% end -%>
+        <%= link_to "Composites", composites_path  %>
+        </li>
+      <% if current_page?(removables_path) -%>
+        <li class="active">
+        <% else -%>
+        <li>
+        <% end -%>
+        <%= link_to "Dentures/Partials", removables_path  %></li>
+      <% if current_page?(implants_path) -%>
+        <li class="active">
+        <% else -%>
+        <li>
+        <% end -%>
+        <%= link_to "Implants", implants_path  %>
+       </li>
+      <% if current_page?(snapOnSmiles_path) -%>
+        <li class="active">
+        <% else -%>
+        <li>
+        <% end -%>
+        <%= link_to "Snap-On Smiles", snapOnSmiles_path  %>
+        </li>
+        
+</div><!--/.well -->

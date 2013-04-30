@@ -1,9 +1,12 @@
+<% provide(:title, 'Home') %>
+<% provide(:pageSummary, "Ace Dental Lab | The Best Dental Lab in Southern California") %>
+
 <% if user_signed_in? %>
 	<h1>You're logged in to Ace!</h1>
 	<div class="hero-unit">
 		<h1>ACE DENTAL LABS</h1>
 		<p>
-			<h2>Become a member </h2>
+			<h2>Become a member and receive </h2>
 			<h2>CALL TODAY</h2>
 			<h2>(714) 525-3653</h2>
 		</p>
@@ -14,12 +17,12 @@
 </div>
    <div class="row-fluid">
         <div class="span4">
-          <h2>Testimonial</h2>
+          <h2>FREE SHIPPING AND RETURNS</h2>
           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
+          <p><%= link_to "Shipping", shipping_path, class: "btn-large btn-custom-darken pull-left" %></p>
         </div>
         <div class="span4">
-          <h2>Testimonial</h2>
+          <h2>Request Free Supplies</h2>
           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
           <p><a class="btn" href="#">View details &raquo;</a></p>
        </div>
@@ -46,9 +49,9 @@
 </div>
    <div class="row-fluid">
         <div class="span4">
-          <h2>Heading</h2>
+          <h2>FREE SHIPPING AND RETURNS</h2>
           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
+          <p><%= link_to "Shipping", shipping_path, class: "btn-large btn-custom-darken pull-left" %></p>
         </div>
         <div class="span4">
           <h2>Heading</h2>

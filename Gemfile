@@ -4,6 +4,9 @@ gem 'jquery-rails'
 gem 'rails', '3.2.13'
 gem 'devise'
 gem 'simple_form'
+gem "paperclip", "~> 3.0"
+gem 'sitemap_generator'
+gem 'has_permalink'
 
 group :production do
 	gem 'pg'

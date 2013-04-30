@@ -4,12 +4,14 @@
   <%= f.error_notification %>
 
   <%= f.input :name %>
+  <%= f.input :address %>
   <%= f.input :email %>
   <%= f.input :password %>
   <%= f.input :password_confirmation %>
+  <p>Password must be 8 characters long.</p>
 
   <div class= "form-actions">
-  <%= f.submit "Sign up" , class: "btn btn-primary" %>
+  <%= f.submit "Sign up" , class: "btn btn-custom-darken btn-large" %>
 </div>
 <% end %>
 

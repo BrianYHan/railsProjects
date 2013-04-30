@@ -1,37 +1,76 @@
  <div class="container-fluid">
+  <h1 class="page-header">Ace Dental Lab Price List</h1>
       <div class="row-fluid">
         <div class="span3">
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header">Products</li>
-                <li class="active"><a href="#">Crowns and Bridges</a></li>
-                  <li><a href="#">Implants</a></li>
-                  <li><a href="#">CAD/CAM</a></li>
-                  <li><a href="#">Composites</a></li>
-                  <li><a href="#">Removables</a></li>
-                  <li><a href="#">Snap-On Smiles</a></li>
+                <li class="active">
+                  <%= link_to "All Ceramic Crowns and Bridges", allCeramic_path  %>
+                </li>
+                <li> 
+                  <%= link_to "CAD/CAM", cadCam_path  %>
+                </li>
+                <li>
+                   <%= link_to "Implants", implants_path  %>
+                 </li>
+                <li>
+                   <%= link_to "Composites", composites_path  %>
+                 </li>
+                <li>
+                   <%= link_to "Removables", removables_path  %></li>
+                <li>
+                   <%= link_to "Snap-On Smiles", snapOnSmiles_path  %>
+                 </li>
                   
           </div><!--/.well -->
         </div><!--/span-->
         <div class="span9">
           <div class="hero-unit">
-            <h1>Ace Dental Lab Price List</h1>
+           <h3>Ask about our monthly coupons!</h3>
             <p>Though we are primarily known form our cosmetic expertise, at Ace Dental Laboratory we offer full-service capabilities in all facets of removable, fixed and implant dentistry. We have been serving Fullerton, Orange County and all of Southern California since 1982. Dental Laboratory Price List: </p>
             <p><a href="#" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
           </div>
         </div>
           <div class="row-fluid">
-            <div class="span8">
-              <h2>Heading</h2>
-              <p>Today, as new technology is developed and introduced into our ever-changing market place, we at ACE Dental Laboratory will continue to work diligently to maintain consistency and quality, while providing new restorative solutions, such as the Ceramage® system, combining natural color reproduction with extraordinary strength and versatility, allowing Ace dental technicians to match surrounding tooth structures in even complicated cases. Zirconia, the easiest, most beautiful to traditional PFM restorations, but without the metal. And Valplast® flexible partials, totally natural means, aesthetic, function and quality.</p>
-              <p><a class="btn" href="#">View details &raquo;</a></p>
-            </div><!--/span-->
-            <div class="span4">
+            <ul class="thumbnails">
+              <li class="span4">
+                <div class="thumbnail">
+                  <%= link_to image_tag("upsLogo.png", :alt => "UPS Logo", class: "img-rounded"), :action =>'allCeramic', :controller =>'product_pages' %>
+                  <div class="caption">
+                    <h3>All Ceramic Crowns and Bridges</h3>
+                    <p>Ace Dental Lab offers a variety of fixed and removable prosthesis such as: Procera®, Lava™, Captek™, Ceramage® zirconia Composites, PFM, FCG, Implants, Valplast®, Clip-On Veneers, Full Acrylic Denture and Metal Partial Denture. </p>
+                  </div>
+                </div>
+              </li>
+              <li class="span4">
+                <div class="thumbnail">
+                  <img data-src="holder.js/300x200" alt="">
+                  <div class="caption">
+                    <h3>Thumbnail label</h3>
+                    <p>Thumbnail caption...</p>
+                  </div>
+                </div>
+              </li>
+              <li class="span4">
+                <div class="thumbnail">
+                  <img data-src="holder.js/300x200" alt="">
+                  <div class="caption">
+                    <h3>Thumbnail label</h3>
+                    <p>Thumbnail caption...</p>
+                  </div>
+                </div>
+              </li>
+
+</ul>
+
+            <div class="span12">
               <h2>Heading</h2>
               <p>Because of the ever changing and prices of materials please contact us at 714-525-3650 for an up to date dental lab price list. You can also check out our monthly dental lab coupons to get some great deals.
                </p>
               <p><a class="btn" href="#">View details &raquo;</a></p>
             </div><!--/span-->
+             
            
           </div><!--/row-->
         </div><!--/span-->
@@ -41,52 +80,6 @@
 
       <!-- START THE FEATURETTES -->
 
-      <hr class="featurette-divider">
-
-      <div class="featurette">
-        <img class="featurette-image pull-right" src="../assets/img/examples/browser-icon-chrome.png">
-        <h2 class="featurette-heading">Crowns and Bridges<span class="muted">Consistent, Speedy, Quality Service</span></h2>
-          <p class="lead">We realize that you have many choices for the best Dental Lab Services in Fullerton and the Southern California region; we thank you for choosing Ace Dental Laboratory, where you always can expect Consistency without compromise, Speed when needed the most, Quality that exceeds most expectations and Service that is without comparison.
-          </p>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="featurette">
-        <img class="featurette-image pull-left" src="../assets/img/examples/browser-icon-firefox.png">
-        <h2 class="featurette-heading">Implants <span class="muted">we have added new members to our team of experienced technicians: </span></h2>
-        <p class="lead"> Our growing team allows us to offer you even better customer service in addition to being able to meet all rush case deadlines.</p>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="featurette">
-        <img class="featurette-image pull-right" src="../assets/img/examples/browser-icon-safari.png">
-        <h2 class="featurette-heading">CAD/CAM<span class="muted">Seriously.</span></h2>
-        <p class="lead">It has been our gratification to serve and offer you an ever expanding variety of restorative options. For those considering Ace Dental Laboratory, we encourage you to take advantage of our 100% unconditional satisfaction guarantee to meet your patient's ever expanding needs and expectations.</p>
-      </div>
-       <div class="featurette">
-        <img class="featurette-image pull-right" src="../assets/img/examples/browser-icon-chrome.png">
-        <h2 class="featurette-heading">Composites<span class="muted">Consistent, Speedy, Quality Service</span></h2>
-          <p class="lead">We realize that you have many choices for the best Dental Lab Services in Fullerton and the Southern California region; we thank you for choosing Ace Dental Laboratory, where you always can expect Consistency without compromise, Speed when needed the most, Quality that exceeds most expectations and Service that is without comparison.
-          </p>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="featurette">
-        <img class="featurette-image pull-left" src="../assets/img/examples/browser-icon-firefox.png">
-        <h2 class="featurette-heading">Removables <span class="muted">we have added new members to our team of experienced technicians: </span></h2>
-        <p class="lead"> Our growing team allows us to offer you even better customer service in addition to being able to meet all rush case deadlines.</p>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="featurette">
-        <img class="featurette-image pull-right" src="../assets/img/examples/browser-icon-safari.png">
-        <h2 class="featurette-heading">Snap-On Smiles<span class="muted">Seriously.</span></h2>
-        <p class="lead">It has been our gratification to serve and offer you an ever expanding variety of restorative options. For those considering Ace Dental Laboratory, we encourage you to take advantage of our 100% unconditional satisfaction guarantee to meet your patient's ever expanding needs and expectations.</p>
-      </div>
-
+    
       <hr class="featurette-divider">
     </div>

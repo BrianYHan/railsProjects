@@ -1,35 +1,38 @@
-<h1>About</h1>
-<div class="navbar-wrapper">
+<% provide(:title, 'About Ace Dental Lab') %>
+<% provide(:pageSummary, "Ace Dental Lab | The Best Dental Lab in Southern California | Since 1982 |  Fullerton Dental Lab | Quality Dentistry, Zirconia, Ceramage, Affordable, Lava, Captek, Procera, Nobel, Peter Han") %>
+<div class="container">
+<h1 class="page-header">About</h1>
+
       <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
       <div class="container">
  <div id="myCarousel" class="carousel slide">
       <div class="carousel-inner">
         <div class="item active">
-          <img src="../assets/img/examples/slide-01.jpg" alt="">
+          
           <div class="container">
-            <div class="carousel-caption">
-              <h1>Best Dental Lab in the US - AceDental Labs</h1>
-              <p class="lead">Welcome to Ace Dental Laboratory - Fullerton Dental Lab and the Best Dental Lab in the USA</p>
-              <a class="btn btn-large btn-primary" href="#">Sign up today</a>
+            <div class="carousel-caption" >
+              <h1 >Best Dental Lab in the US - Ace Dental Labs</h1>
+              <p class="lead">Welcome to Ace Dental Lab! - We are a Family Owned Dental Lab that offers premium Dental restoration to Dentists at an affordable price. Become an member of </p>
+              <a class="btn btn-large btn-primary" href="#">Sign up today!</a>
             </div>
           </div>
         </div>
         <div class="item">
-          <img src="../assets/img/examples/slide-02.jpg" alt="">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Constant innovation</h1>
-              <p class="lead">Over the past 30 years, we at Ace Dental Laboratory have added many new restorative options to our product line, such as Lava, Captek, Solid Zirconia and Procera. We also improve and customize existing dental technology, like the flexible Valplast partials; a tough yet flexible product that is easy to prepare, easy to insert and easy to adjust. </p>
+          <%= link_to image_tag("labPhotos/fullBench1crop.JPG", :alt => "full bench1") %>
+          <div class="container" style="color:black">
+            <div class="carousel-caption" style="color:black">
+              <h1 style="color:black">Constant innovation</h1>
+              <p class="lead" style="color:green">Over the past 30 years, we at Ace Dental Laboratory have added many new restorative options to our product line, such as Lava, Captek, Solid Zirconia and Procera. We also improve and customize existing dental technology, like the flexible Valplast partials; a tough yet flexible product that is easy to prepare, easy to insert and easy to adjust. </p>
               <a class="btn btn-large btn-primary" href="#">Learn more</a>
             </div>
           </div>
         </div>
         <div class="item">
-          <img src="../assets/img/examples/slide-03.jpg" alt="">
+        <iframe width="1150" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=536+west+commonwealth+ave.&amp;ie=UTF8&amp;hq=&amp;hnear=536+W+Commonwealth+Ave,+Fullerton,+Orange,+California+92832&amp;gl=us&amp;t=m&amp;ll=33.888658,-117.977886&amp;spn=0.035625,0.102911&amp;z=14&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?q=536+west+commonwealth+ave.&amp;ie=UTF8&amp;hq=&amp;hnear=536+W+Commonwealth+Ave,+Fullerton,+Orange,+California+92832&amp;gl=us&amp;t=m&amp;ll=33.888658,-117.977886&amp;spn=0.035625,0.102911&amp;z=14&amp;source=embed" style="color:#0000FF;text-align:left">View Larger Map</a></small>
           <div class="container">
-            <div class="carousel-caption">
-              <h1>One more for good measure.</h1>
-              <p class="lead">A full service dental laboratory serving the USA, city of Fullerton, Orange County and all of Southern California since 1982. Dedicated to providing innovative dental products, a commitment to quality and reasonable pricing. </p>
+            <div class="carousel-caption" style="color:black">
+              <h1 style="color:black">Located in <br>Fullerton, California</h1>
+              <p class="lead" style="color:black">A full service dental laboratory serving the city of Fullerton, Orange County and all of Southern California since 1982. We are dedicated to providing innovative dental products, a commitment to quality and reasonable pricing. </p>
               <a class="btn btn-large btn-primary" href="#">Browse gallery</a>
             </div>
           </div>
@@ -52,28 +55,55 @@
       <hr class="featurette-divider">
 
       <div class="featurette">
-        <img class="featurette-image pull-right" src="../assets/img/examples/browser-icon-chrome.png">
-        <h2 class="featurette-heading">For Every Case:<span class="muted">Consistent, Speedy, Quality Service</span></h2>
-        	<p class="lead">We realize that you have many choices for the best Dental Lab Services in Fullerton and the Southern California region; we thank you for choosing Ace Dental Laboratory, where you always can expect Consistency without compromise, Speed when needed the most, Quality that exceeds most expectations and Service that is without comparison.
-					</p>
+        <div class="row-fluid">
+          <div class="span8">
+            <h2 class="featurette-heading">For Every Case:<span class="muted">Consistent, Speedy, Quality Service</span></h2>
+        	   <p class="lead">
+              We realize that you have many choices for the best Dental Lab Services in Fullerton and the Southern California region; we thank you for choosing Ace Dental Laboratory, where you always can expect Consistency without compromise, Speed when needed the most, Quality that exceeds most expectations and Service that is without comparison.
+					   </p>
+          </div>
+          <div class="span4" >
+            <%= image_tag("labPhotos/catson1.JPG", :alt => "Catson 1", class: "img-circle featurette-image pull-right") %> 
+          </div>
+        </div>
       </div>
 
       <hr class="featurette-divider">
 
       <div class="featurette">
-        <img class="featurette-image pull-left" src="../assets/img/examples/browser-icon-firefox.png">
-        <h2 class="featurette-heading">Hiring since 2010: <span class="muted">we have added new members to our team of experienced technicians: </span></h2>
-        <p class="lead"> Our growing team allows us to offer you even better customer service in addition to being able to meet all rush case deadlines.</p>
+        <div class="row-fluid">
+          <div class="span8">
+            <h2 class="featurette-heading">Hiring since 2010: <span class="muted">Detail Oriented (we mean it!)team players apply here! </span></h2>
+              <p class="lead"> 
+                Our growing team allows us to offer you even better customer service in addition to being able to meet all rush case deadlines. 
+                 <br style="clear:both">
+              </p> 
+          </div>
+          <div class="span4" >
+            
+           <%= image_tag("labPhotos/justacouplaguys.JPG", :alt => "Mr Kim and Mr Fuentes", class: "img-circle featurette-image ") %> <caption>Mr. Kim (2002) and Mr. Fuentes (2004)</caption><br><br><br>
+            <p>                 <%= link_to "Work at Ace!", contact_us_path, class: "btn-large btn-primary " %>
+            </p>
+          </div>
+        </div>
       </div>
-
       <hr class="featurette-divider">
 
       <div class="featurette">
-        <img class="featurette-image pull-right" src="../assets/img/examples/browser-icon-safari.png">
-        <h2 class="featurette-heading">Our Unconditional Satisfaction Guarantee<span class="muted">Seriously.</span></h2>
-        <p class="lead">It has been our gratification to serve and offer you an ever expanding variety of restorative options. For those considering Ace Dental Laboratory, we encourage you to take advantage of our 100% unconditional satisfaction guarantee to meet your patient's ever expanding needs and expectations.</p>
+        <div class="row-fluid">
+          <div class="span8">
+            <h2 class="featurette-heading">Our Unconditional Satisfaction Guarantee<span class="muted"> Seriously.</span></h2>
+              <p class="lead">
+                It has been our gratification to serve and offer you an ever expanding variety of restorative options. For those considering Ace Dental Laboratory, we encourage you to take advantage of our 100% unconditional satisfaction guarantee to meet your patient's ever expanding needs and expectations.
+              </p>
+          </div>
+          <div class="span4" >
+            <%= image_tag("labPhotos/dadLarge.png", :alt => "large Dad 1", class: "img-circle featurette-image pull-right") %> <caption>Peter Han (Owner, Pretty great guy)</caption>
+           
+           
+          </div>
+        </div>
       </div>
-
       <hr class="featurette-divider">
     </div>
   </div>

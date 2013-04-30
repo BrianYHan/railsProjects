@@ -1,19 +1,40 @@
 Omrails::Application.routes.draw do
+
+
+
   resources :pins
+  
+ 
 
 
   devise_for :installs
-    devise_for :users
+  devise_for :users
 
   root :to => 'pages#home'
   get 'about' => 'pages#about'
-  get 'products' => 'pages#products'
+
   get 'downloads' => 'pages#downloads'
   get 'shipping' => 'pages#shipping'
   get 'contact_us' => 'pages#contact_us'
   get 'working_sched_14' => 'pages#working_sched_14'
   get 'terms_policies_15' => 'pages#terms_policies_15'
   get 'dental_lab_coupons' => 'pages#dental_lab_coupons'
+
+
+  get 'products'  => 'product_pages#products'
+
+  get 'allCeramic' => 'product_pages#allCeramic'
+
+  get 'cadCam'  => 'product_pages#cadCam'
+
+  get 'composites' => 'product_pages#composites'
+
+  get 'implants' => 'product_pages#implants'
+
+  get 'removables' => 'product_pages#removables'
+
+  get 'snapOnSmiles' => 'product_pages#snapOnSmiles'
+
 
 
  

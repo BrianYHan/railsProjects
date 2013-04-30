@@ -15,8 +15,6 @@ class PagesController < ApplicationController
   def downloads
   end
 
-  def products
-  end
 
   def shipping
   end
@@ -27,5 +25,7 @@ class PagesController < ApplicationController
   def working_sched_14
 
   end
+
+
 
 end

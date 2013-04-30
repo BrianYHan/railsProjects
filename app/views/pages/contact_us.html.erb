@@ -1,33 +1,47 @@
-
-
- <div class="container-narrow">
-      <div class="jumbotron">
-        <h1>Contact Us: <small>For a quote, a job, or even if you are just bored!</small></h1>
+<% provide(:title, 'Contact Ace') %>
+<% provide(:pageSummary, "Ace Dental Lab | The Best Dental Lab in Southern California | Contact Us | Phone: 714 525 3653 | acedentallabs@gmail.com") %>
+<div class="container">
+ 
+        <h1 class="page-header">Contact Us: <small>For a quote, a job, or even if you are just bored!</small></h1>
         <br>
-             <form class="well span8">
-  			<div class="row">
-		<div class="span3">
-			<label>First Name</label>
-			<input type="text" class="span3" placeholder="Your First Name">
-			<label>Last Name</label>
-			<input type="text" class="span3" placeholder="Your Last Name">
+             <form class="well span12">
+  			
+		<div class="span5">
+			<label>Name</label>
+			 <input type="text" class="span5" placeholder="Your Name">
+			<label>Phone Number</label>
+			 <input type="tel" class="span5" placeholder="Your Phone Number">
 			<label>Email Address</label>
-			<input type="text" class="span3" placeholder="Your email address">
-          	<label>Subject</label>
-			<select id="subject" name="subject" class="span3">
+			 <input type="text" class="span5" placeholder="Your Email Address">
+      <label>Reason for your interest?</label>
+			 <select id="subject" name="subject" class="span5">
 				<option value="na" selected="">Choose One:</option>
+        <option value="quote">Quote</option>
 				<option value="service">General Customer Service</option>
 				<option value="suggestions">Suggestions</option>
 				<option value="product">Product Support</option>
 			</select>
-		</div>
+    
+       <label>How did you hear about us?</label>
+       <select id="advertising" name="advertising" class="span5">
+        <option value="referral" selected="">Another Doctor</option>
+        <option value="google">Google Ads</option>
+        <option value="internet">Other places on the internet</option>
+        <option value="suggestions">Suggestions</option>
+        <option value="product">Product Support</option>
+        <option value="jobs">Career Enquiry</option>
+      </select>
+    </div>
+  
+  
 		<div class="span5">
-			<label>Message</label>
-			<textarea name="message" id="message" class="input-xlarge span5" rows="10"></textarea>
-		</div>
+			<label>Comments</label>
+			<textarea name="message" id="message" class="input-xlarge span5" rows="12"></textarea>
+		
 	
-		<button type="submit" class="btn btn-primary pull-right">Send</button>
-	</div>
+		<button type="submit" class="btn btn-custom-darken text-center btn-large pull-right">Send</button>
+    </div>
+
 </form>
       </div>
 
@@ -37,21 +51,14 @@
         <div class="span6">
           <h4>Job Opening1</h4>
           <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-
+        </div>
+        <div class="span6">
           <h4>Job Opening2</h4>
           <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
 
         </div>
 
-        <div class="span6">
-          <h4>Job Opening3</h4>
-          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
 
-          <h4>Job Opening4</h4>
-          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-
-          
-        </div>
       </div>
 
       <hr>

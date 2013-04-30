@@ -1,6 +1,11 @@
 // Global values
 // --------------------------------------------------
 
+//Alignment
+//====================
+.middleAlign{
+  vertical-align: middle;
+  }
 
 // Grays
 // -------------------------
@@ -21,6 +26,7 @@ $navbarText: white;
 
 // Accent colors
 // -------------------------
+$lightBlue:             #6282CB !default;
 $blue:                  #049cdb !default;
 $blueDark:              #0064cd !default;
 $green:                 #46a546 !default;
@@ -29,6 +35,7 @@ $yellow:                #ffc40d !default;
 $orange:                #f89406 !default;
 $pink:                  #c3325f !default;
 $purple:                #7a43b6 !default;
+$eggBlue:               #5E99C9 !default;
 
 
 // Scaffolding
@@ -51,6 +58,7 @@ $sansFontFamily:      'Raleway', sans-serif;
 @import url(http://fonts.googleapis.com/css?family=Satisfy);
 @import url(http://fonts.googleapis.com/css?family=Playfair+Display);
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,800);
+$cursiveFontFamily: 'Satisfy', sans-serif;
 
 
 $serifFontFamily:       'Quicksand';
@@ -100,17 +108,18 @@ $borderRadiusSmall:     3px !default;
 
 //Body and footer styles
 body{
-	padding-top: 60px;
-	padding-bottom: 40px;
+	padding-top: 70px;
   color: #5a5a5a;
-  height:100%
+  padding-bottom:0px;
+  min-height:800px;
 
 }
 
 .footer{
-height:8%;
+  height:60px;
 	margin-bottom:0px;
-  padding: 10px 5px 5px 5px;
+  margin-top:40px;
+  padding: 5px 5px 5px 5px;
 	color:$cream;
 	background-color: $grayLight;
   width:100%;
@@ -123,36 +132,192 @@ height:8%;
 	overflow:hidden;
   height:100%;
 }
+
+#tab-walls{
+
+  margin-bottom:40px;
+  margin-top:40px;
+  
+  padding:20px;
+}
+
+//  .tabbable, {
+//     border:10px $grayLight solid;
+// }
+
+#shippingContainer{
+  font-family:$serifFontFamily;
+  border: 10px $grayLight dotted;
+  
+}
+#termsContainer{
+  font-family:$serifFontFamily;
+  min-height:600px;
+ 
+}
+
+.thumbnail{
+  
+  &:hover{border:$eggBlue 3px solid;}
+  font-size: .9em;
+  
+}
+
+
+/*custom buttom  
+__________________________________________________*/
+.btn-custom-lighten {
+  &.active {
+    color: rgba(255, 255, 255, 0.75);
+  }
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #304991;
+  background-image: -moz-linear-gradient(top, #2b4182, #3854a8);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#2b4182), to(#3854a8));
+  background-image: -webkit-linear-gradient(top, #2b4182, #3854a8);
+  background-image: -o-linear-gradient(top, #2b4182, #3854a8);
+  background-image: linear-gradient(to bottom, #2b4182, #3854a8);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff2b4182', endColorstr='#ff3854a8', GradientType=0);
+  border-color: #3854a8 #3854a8 #25376f;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #3854a8;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+    &:hover, &:focus, &:active, &.active, &.disabled, &[disabled] {
+      color: #ffffff;
+      background-color: #3854a8;
+      *background-color: #314b95;
+    }
+    &:active, &.active {
+      background-color: #2b4182;
+    }
+}
+
+.btn-custom-darken {
+  &.active {
+    color: rgba(255, 255, 255, 0.75);
+  }
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #263973;
+  background-image: -moz-linear-gradient(top, #2b4182, #1e2e5c);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#2b4182), to(#1e2e5c));
+  background-image: -webkit-linear-gradient(top, #2b4182, #1e2e5c);
+  background-image: -o-linear-gradient(top, #2b4182, #1e2e5c);
+  background-image: linear-gradient(to bottom, #2b4182, #1e2e5c);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff2b4182', endColorstr='#ff1e2e5c', GradientType=0);
+  border-color: #1e2e5c #1e2e5c #0b1122;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #1e2e5c;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  &:hover, &:focus, &:active, &.active, &.disabled, &[disabled] {
+    color: #ffffff;
+    background-color: #1e2e5c;
+    *background-color: #182449;
+  }
+  &:active, &.active {
+    background-color: #121b35;
+  }
+}
+
+
+
  /* CUSTOMIZE THE NAVBAR
      -------------------------------------------------- */
 .navbar{
-	z-index:25;
+	z-index:50;
+  font-size: .72em;
+  font-weight:bold;
+  .nav > li > a {
+    padding: 15px 20px;
+  }
+  .btn-navbar {
+    margin-top: 10px;
+  }
 	.navbar-inner {
-      -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);
-         -moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);
-              box-shadow: 0 2px 10px rgba(0,0,0,.25);
+    -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+       -moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+            box-shadow: 0 2px 10px rgba(0,0,0,.25);
 		border:0;
     padding-left:40px;
     padding-right:40px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
 	}
 	.brand{
 		color:black;
-		font-size:30px;
+    font-family:$cursiveFontFamily;
+		font-size:26px;
 		padding: 14px 20px 16px; /* Increase vertical padding to match navbar links */
     font-weight: bold;
     text-shadow: 0 -1px 0 rgba(0,0,0,.5);
 		&:hover{
 			color:white;
 		}
-	}
-	.nav{
-		li{
-			a{
-				color:black;
-				&:hover{
-					color:white;
-				}
-			}
+  }
+
+    .stttrong{
+    color: white;
+    font-weight:bold;
+    a{
+    &:hover{
+      text-decoration:underline;
+      color:red;
+      font-weight:bold;
+      }
+    }
+    }
+	
+
+
+
+	#menuBar{
+    padding:0;
+    margin-top:none;
+    overflow:visible;
+
+    li{
+      position: relative; 
+      float: left;
+  list-style: none;
+    a{
+        display: block;
+        text-decoration:none;
+        &:hover{
+          background-color:$abcGreen;
+          text-decoration:underline;
+          color:white;
+          font-weight:bold;
+        }
+
+      }
+    
+    }
+    a{
+      color: black;
+    }
+
+		ul{
+      ul{
+        position: absolute;
+        visibility: hidden;
+        
+      }
+			li{
+        &:hover{
+          ul{
+            visibility:visible;
+            text-decoration:underline;
+            color:white;
+            font-weight:bold;
+          }
+        }
+
+      }
 		}
 	}
 }
@@ -163,21 +328,13 @@ height:8%;
       left: 0;
       right: 0;
       z-index: 30;
-      margin-top: 60px;
+      padding-bottom:10 px;
       margin-bottom: -90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
     }
 
   
  
-    /* Navbar links: increase padding for taller navbar */
-    .navbar .nav > li > a {
-      padding: 15px 20px;
-    }
-
-    /* Offset the responsive button for proper vertical alignment */
-    .navbar .btn-navbar {
-      margin-top: 10px;
-    }
+   
 
 
 
@@ -186,12 +343,18 @@ height:8%;
 
     /* Carousel base class */
     .carousel {
-      margin-bottom: 60px;
+      margin-bottom: 40px;
+      background: $abcGreen;
+      background-image: url("zenbg-1.png"), url("zenbg-2.png");
+      background-repeat: repeat-x, repeat;
+      border-radius:20px;
+    
     }
 
     .carousel .container {
       position: relative;
       z-index: 9;
+      border-radius:20px;
     }
 
     .carousel-control {
@@ -202,10 +365,13 @@ height:8%;
       background-color: transparent;
       border: 0;
       z-index: 10;
+      border-radius:20px;
     }
 
     .carousel .item {
       height: 500px;
+      border-radius:20px;
+
     }
     .carousel img {
       position: absolute;
@@ -213,12 +379,24 @@ height:8%;
       left: 0;
       min-width: 100%;
       height: 500px;
+      border-radius:20px;
+
+    }
+
+    .carousel iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      height: 500px;
+      border-radius:20px;
+
     }
 
     .carousel-caption {
       background-color: transparent;
       position: static;
-      max-width: 550px;
+      max-width: 700px;
       padding: 0 20px;
       margin-top: 200px;
     }
@@ -226,12 +404,13 @@ height:8%;
     .carousel-caption .lead {
       margin: 0;
       line-height: 1.25;
-      color: #fff;
+      color:#fff;
       text-shadow: 0 1px 1px rgba(0,0,0,.4);
     }
     .carousel-caption .btn {
       margin-top: 10px;
     }
+
 
 
 
@@ -255,11 +434,11 @@ height:8%;
     ------------------------- */
 
     .featurette-divider {
-      margin: 80px 0; /* Space out the Bootstrap <hr> more */
+      margin: 50px 0; /* Space out the Bootstrap <hr> more */
     }
     .featurette {
     	font-family:$serifFontFamily;
-      padding-top: 120px; /* Vertically center images part 1: add padding above and below text. */
+      padding-top: 140px; /* Vertically center images part 1: add padding above and below text. */
       overflow: hidden; /* Vertically center images part 2: clear their floats. */
     }
     .featurette-image {
@@ -268,30 +447,42 @@ height:8%;
 
     /* Give some space on the sides of the floated elements so text doesn't run right into it. */
     .featurette-image.pull-left {
-      margin-right: 40px;
+      margin-right: 20px;
     }
     .featurette-image.pull-right {
-      margin-left: 40px;
+      margin-left: 20px;
     }
 
     /* Thin out the marketing headings */
     .featurette-heading {
-      font-size: 50px;
-      font-weight: 300;
+      font-size: 40px;
+      font-weight: 270;
       line-height: 1;
       letter-spacing: -1px;
     }
 
+  /* Image CSS
+    -------------------------------------------------- */
 
+    .largePhoto{
+      min-height:450px;
+      margin:auto;
+      float:none;
+    }
 
     /* RESPONSIVE CSS
     -------------------------------------------------- */
 
     @media (max-width: 979px) {
+      .container{
+        height:100%;
+      
+      }
 
       .container.navbar-wrapper {
         margin-bottom: 0;
         width: auto;
+        
       }
       .navbar-inner {
         border-radius: 0;

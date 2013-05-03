@@ -1,26 +1,6 @@
 <% provide(:title, 'Patient Photos') %>
 <% provide(:pageSummary, "Ace Dental Lab | The Best Dental Lab in Southern California | Product List | CAD/CAM | Zirconia | Lava | Crown | Bridge") %>
 <h1 class="page-header">Listing Patient Photos</h1>
-<br>
-<table >
-  <tr>
-    <th><h4>Image</h4></th>
-    <th><h5>Description:</h5></th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @pins.each do |pin| %>
-  <tr>
-    <td style="padding-right:20px"><%= pin.description %></td>
-    <td style="padding-right:20px"><%= link_to 'Show', pin %></td>
-    <td style="padding-right:20px"><%= link_to 'Edit', edit_pin_path(pin) %></td>
-    <td style="padding-right:20px"><%= link_to 'Delete', pin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Pin', new_pin_path , class:"btn btn-custom-lighten btn-large" %>
+<div id="pins">
+  <%= render @pins %>
+</div>

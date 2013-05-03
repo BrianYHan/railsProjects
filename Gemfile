@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'jquery-rails'
-gem 'rails', '3.2.13'
+gem 'rails', '3.2.11'
 gem 'devise'
 gem 'simple_form'
 gem "paperclip", "~> 3.0"

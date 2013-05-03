@@ -1,7 +1,7 @@
  <% provide(:title, 'Ace Product List') %>
-<% provide(:pageSummary, "Ace Dental Lab | The Best Dental Lab in Southern California | Product List | CAD/CAM | Zirconia | Lava | Crown | Bridge") %>
+<% provide(:pageSummary, "Ace Dental Lab | The Best Dental Lab in Southern California | Product List | CAD/CAM | Zirconia | Lava | Crown | Bridge | Procera® | Lava™|Procera® | Lava™ | Captek™ | Ceramage® zirconia Composites| PFM, FCG | Implants | Valplast® | Clip-On Veneers | Full Acrylic Denture and Metal Partial Denture.Captek™| Ceramage® zirconia Composites | PFM | FCG | Implants | Valplast® | Clip-On Veneers| Full Acrylic Denture and Metal Partial Denture.") %>
  <div class="container-fluid">
-  <h1 class="page-header">Ace Dental Lab Price List</h1>
+  <h1 class="page-header">Ace Dental Lab Product List</h1>
       <div class="row-fluid">
         <div class="span3">
           <%= render 'layouts/productsMenu'%> 
@@ -9,10 +9,45 @@
         <div class="span9">
           <div class="hero-unit">
            <h3>Ask about our monthly coupons!</h3>
-            <p>Though we are primarily known form our cosmetic expertise, at Ace Dental Laboratory we offer full-service capabilities in all facets of removable, fixed and implant dentistry. We have been serving Fullerton, Orange County and all of Southern California since 1982. Dental Laboratory Price List: </p>
-            <p><%= link_to "Get Your Coupons Now!", contact_us_path, class: "btn btn-primary btn-large" %></p>
+            <p>Though we are primarily known form our cosmetic expertise, at Ace Dental Laboratory we offer full-service capabilities in all facets of removable, fixed and implant dentistry. We have been serving Fullerton, Orange County and all of Southern California since 1982.  </p>
+            <p><%= link_to "What's on Sale Now?", downloads_path, class: "btn btn-primary btn-large" %></p>
           </div>
         </div>
+
+</div>
+  <div class="well"><dl class="dl-horizontal">
+  <dt>Crowns and Bridges</dt>
+  <dd>
+   Ace Dental Laboratory offers a variety of fixed and removable All-Ceramic prosthesis such as: Procera®, Lava™, Captek™, Ceramage® zirconia Composites, PFM, FCG, Implants, Valplast®, Clip-On Veneers, Full Acrylic Denture and Metal Partial Denture. 
+  </dd>
+  <br>
+  <dt>CAD/CAM</dt>
+  <dd>
+  Ace Dental Laboratory offers a variety of fixed and removable prosthesis as well as CAD/CAM Zirconia aesthetic restorations such as: IPS e.max®, Captek™, Feldspathic Veneers, 3G™ Ceramics, Ceramage® zirconia Composites, PFM, FCG, Implants, Clip-On Veneers, Valplast®, Full Acrylic Denture and Metal Partial Denture.
+  </dd>
+    <br>
+  <dt>Composites</dt>
+  <dd>
+      Ace Dental Laboratory offers composite aesthetic restorations and a variety of fixed and removable prosthesis such as: Procera®, Lava™, IPS e.max®, Captek™, PFM, FCG, Implants, Clip-On Veneers, Valplast®, Full Acrylic Denture and Metal Partial Denture. 
+  </dd>
+    <br>
+  <dt>Dentures/Partials</dt>
+  <dd>
+     Ace Dental Laboratory offers removable appliances as well as a variety of fixed prosthesis such as: Procera®, Lava™, IPS e.max®, Ceramage® zirconia Composites, Snap-On Veneers, Feldspathic Veneers, 3G™ Ceramics, PFM, FCG, Implants Denture.
+  </dd>
+    <br>
+  <dt>Implants</dt>
+  <dd>
+   Ace Dental Laboratory offers a variety of fixed and removable prosthesis in addition to our implants, such as: Procera®, Lava™, IPS e.max®, Ceramage® zirconia Composites, Feldspathic Veneers, 3G™ Ceramics, Clip-On Veneers, Valplast®, Full Acrylic Denture and Metal Partial Denture.
+  </dd>
+    <br>
+  <dt>Snap-On Smiles/Clip-On Veneers</dt>
+  <dd>
+    In addition to our Snap-On Smiles system, we also have Clip-On Veneers at your preference.
+  </dd>
+  </dl>
+</div>
+   <hr class="featurette-divider">
           <div class="row-fluid">
             <ul class="thumbnails">
               <li class="span4">
@@ -59,7 +94,7 @@
               </li>
               <li class="span4">
                 <div class="thumbnail">
-                  <center><%= link_to image_tag("productImages/implants.jpg", :alt => "Implants 1", class: "img-rounded"), :action =>'implants', :controller =>'product_pages' %></center>
+                  <center><%= link_to image_tag("implant.jpg", :alt => "Implants 1", class: "img-rounded"), :action =>'implants', :controller =>'product_pages' %></center>
                   <div class="caption">
                     <h3 class="text-center">Implants</h3>
                     <p>Permanent implants, transitional implants, bioaesthetic abutments, Titanium and Zirconia abutments through partnerships with: <a href="http://www.nobelbiocare.com/en/home/default.aspx">Nobel Procera®</a>, <a href="http://biomet3i.com/">3I®</a>, <a href="http://www.zimmerdental.com/Home/zimmerDental.aspx">Zimmer</a>, <a href="http://www.sybrondental.com/">Innova Corp.</a>, and <a href="http://www.iti.org/">ITI</a>.</p>
@@ -68,7 +103,7 @@
               </li>
              <li class="span4">
                 <div class="thumbnail">
-                  <center><%= link_to image_tag("productImages/allCeramic.jpg", :alt => "Ceramic 1", class: "img-rounded"), :action =>'snapOnSmiles', :controller =>'product_pages' %></center>
+                  <center><%= link_to image_tag("productImages/snapOnSmileImages/snapOnSmile4.jpg", :alt => "Snap On Smile 1", class: "img-rounded productImages"), :action =>'snapOnSmiles', :controller =>'product_pages' %></center>
                   <div class="caption">
                     <h3 class="text-center">All-Ceramic Crowns and Bridges</h3>
                     <p>Clip-On Veneers and Snap-On Smiles from Ace Dental Laboratory are non-invasive cosmetic, removable arches that snap into place over existing dentition without adhesives, and without biting down on gingival tissue or covering the palate.</p>
@@ -77,12 +112,11 @@
               </li>
           </ul>
 
-
             <div class="span12">
-              <h2>Call Us!</h2>
+              <h2>Call Today!</h2>
               <p>Because of the ever changing and prices of materials please contact us at 714-525-3650 for an up to date dental lab price list. You can also check out our monthly dental lab coupons to get some great deals.
                </p>
-              <p><a class="btn" href="#">View details &raquo;</a></p>
+              <p class="text-center"><%= link_to "Contact Ace", contact_us_path, class:"btn btn-large btn-custom-darken"%></p>
             </div><!--/span-->
              
            

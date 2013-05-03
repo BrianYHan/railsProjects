@@ -1,5 +1,6 @@
-<h2>Sign up</h2>
-
+<% provide(:title, 'Sign Ups') %>
+<% provide(:pageSummary, "Ace Dental Lab | The Best Dental Lab in Southern California | Product List | All Ceramic | Zirconia | Lava | Crown | Bridge | In addition to our All-Ceramic aesthetic restorations, Ace Dental Laboratory offers a variety of fixed and removable prosthesis such as: Procera®, Lava™, Captek™, Ceramage® zirconia Composites, PFM, FCG, Implants, Valplast®, Clip-On Veneers, Full Acrylic Denture and Metal Partial Denture. ") %>
+<h1 class="page-header">Sign Up</h1>
 <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: {class: 'form-horizontal'}) do |f| %>
   <%= f.error_notification %>
 
